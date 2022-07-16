@@ -1,0 +1,13 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p><% @task.completed %></p>
+
+<p><%= link_to "Edit this task", edit_path(@task) %></p>
+<p><%= link_to "Back to list", tasks_path %></p>
+<% if @task.completed == true %>
+<p><i class="fa-regular fa-square-check"> </i> <%= "This task is complete" %></p>
+<% else %>
+<p><i class="fa-regular fa-square"></i> <%= "This task is not yet complete" %></p>
+<% end %>
+
+<%# css - div - flexbox or bootstrap %>
